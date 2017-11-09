@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const controller = require('../controllers/answers')
+router.get('/', controller.get_all)
+router.get('/by/:id', controller.get_by)
+router.get('/:id', controller.get_by_id)
+router.post('/', controller.create)
+router.put('/vote/like/:id', controller.like)
+// router.put('/vote/unlike/:id', controller.unlike)
+router.delete('/:id', controller.delete)
+module.exports = router
