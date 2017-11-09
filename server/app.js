@@ -14,6 +14,6 @@ app.use('/login', login)
 app.use('/users', users)
 app.use('/questions', questions)
 app.use('/answers', answers)
-app.listen(5005, () => {
-    console.log("Ready on PORT 5005")
+app.listen(process.env.PORT || 3001, () => {
+    console.log("Ready on PORT 3001")
 })
